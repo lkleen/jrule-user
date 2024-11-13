@@ -12,20 +12,38 @@
     <maven.compiler.target>11</maven.compiler.target>
     <junit.jupiter.version>5.8.2</junit.jupiter.version>
     <junit.platform.version>5.4.0</junit.platform.version>
-    <ohc.version>3.3.0-SNAPSHOT</ohc.version>
+    <ohc.version>4.2.2</ohc.version>
   </properties>
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+    <repository>
+      <id>Eclipse</id>
+      <name>Eclipse</name>
+      <url>https://repo.eclipse.org/content/groups/releases/</url>
+    </repository>
+    <repository>
+      <id>JFrog</id>
+      <name>JFrog</name>
+      <url>https://openhab.jfrog.io/openhab/libs-release/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>com.github.seaside1</groupId>
       <artifactId>jrule</artifactId>
       <version>main-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/jar/org.openhab.automation.jrule-4.0.0-BETA21.jar</systemPath>
     </dependency>
     <dependency>
-      <groupId>org.openhab.automation.jrule.items</groupId>
-      <artifactId>jrule-items</artifactId>
+      <groupId>org.openhab.automation.jrule.generated</groupId>
+      <artifactId>jrule-generated</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <scope>system</scope>
-      <systemPath>${basedir}/jar/jrule-items.jar</systemPath>
+      <systemPath>${basedir}/jar/jrule-generated.jar</systemPath>
     </dependency>
     <dependency>
       <version>1.2.9</version>
@@ -148,10 +166,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <repositories>
-    <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
-    </repository>
-  </repositories>
 </project>

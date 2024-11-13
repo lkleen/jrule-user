@@ -1,7 +1,12 @@
-Group:Number:SUM gPower   "Total Power [%.2f Watt]"         
+Switch fireplace_light_desk_PowerSwitch   "Fireplace Desk Light PowerSwitch"  {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:PowerSwitch" }
+Number fireplace_light_desk_LinkQuality   "Fireplace Desk Light LinkQuality"  {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:LinkQuality" }
+Number fireplace_light_desk_Brightness    "Fireplace Desk Light Brightness"   {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:Brightness" }
+Number fireplace_light_desk_ColorX        "Fireplace Desk Light ColorX"       {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:ColorX" }
+Number fireplace_light_desk_ColorY        "Fireplace Desk Light ColorY"       {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:ColorY" }
+Number fireplace_light_desk_ColorTemp     "Fireplace Desk Light ColorTemp"    {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:ColorTemp" }
+String fireplace_light_desk_ColorMode     "Fireplace Desk Light ColorMode"    {channel="mqtt:topic:zigbee2mqtt:fireplace_light_desk:ColorMode" }
 
-Number MyPower1     "My Power1 [%.2f W]"               (gPower) 
-Number MyPower2     "My Power2 [%.2f W]"               (gPower)
+String fireplace_switch_Action      "Fireplace Switch Action"       {channel="mqtt:topic:zigbee2mqtt:fireplace_switch:Action" }
+Number fireplace_switch_LinkQuality "Fireplace Switch LinkQuality"  {channel="mqtt:topic:zigbee2mqtt:fireplace_switch:LinkQuality" }
+Number fireplace_switch_Battery     "Fireplace Switch Battery"      {channel="mqtt:topic:zigbee2mqtt:fireplace_switch:Battery" }
 
-DateTime MyLastSeen1  "My Last Seen1 [%1$tY.%1$tm.%1$td %1$tH:%1$tM]" 
-DateTime MyLastSeen2  "My Last Seen2 [%1$tY.%1$tm.%1$td %1$tH:%1$tM]" 
