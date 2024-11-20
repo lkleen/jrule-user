@@ -14,13 +14,15 @@ Requirements
 5. Build with mvn install and deploy it in OpenHAB by placing the created jar-file (jrule-user-1.0-SNAPSHOT.jar) under:  /etc/automation/jrule/rules-jar/
 
 ## Dependencies 
-The project is depending on some jars:
+The project is depending on some jars. The files are downloaded along with the github repo or automatically installed
+when executing 'mvn clean install'
 
-1. jrule-items.jar (This file is containing some sample items see https://github.com/seaside1/jrule-user/blob/main/items/jrule-user.items
-2. jrule.jar (Dependency on latest snapshot of https://github.com/seaside1/jrule
-3. junit-jupiter (For JUnit 5)
-4. Mockito (For mocking rules)
-5. Variouse OpenHAB core dependencies
+1. jrule-generated.jar (This file is containing the sample items see https://github.com/seaside1/jrule-user/blob/main/items/jrule-user.items
+2. org.openhab.automation.jrule-4.0.0-BETA21.jar (Dependency on latest snapshot of https://github.com/seaside1/jrule
+
+## Custom Items
+To add items from your own openHAB installation replace the jrule-generated.jar in the jar folder of this project with
+the generated file from your openHAB installation from /etc/automation/jrule/gen
 
 ## Testing
 In order to test Java Rules using JUnit and mockito the OpenHAB Eventbus has 

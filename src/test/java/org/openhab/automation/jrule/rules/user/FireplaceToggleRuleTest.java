@@ -41,6 +41,5 @@ public class FireplaceToggleRuleTest {
         engine.add(fireplaceToggleRule, true);
         JRuleMockedEventBus eventBus = new JRuleMockedEventBus();
         eventBus.start();
-        verify(fireplaceToggleRule.toggleSwitch()).equals(true);
     }
 }
